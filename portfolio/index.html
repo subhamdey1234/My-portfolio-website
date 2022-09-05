@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            portfolio web
+        </title>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav  li a {
+  padding: 5px 5px 5px 5px;
+  margin: 6px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+background:rgb(68, 67, 67) ;
+border-radius: 1rem;
+}
+
+ .sidenav  li a:hover{
+    background: #111;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  margin-bottom: 700px;
+margin-right: 50%;
+align-items: center;
+align-content: center;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.user img{
+    border-radius: 50%;
+
+}
+#home{
+      transition: margin-left .5s;
+   margin-left: 26px;
+}
+
+.home .himg{
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.home .himg img{
+    height: 400px;
+}
+
+.hidden{
+    display: flexbox;
+}
+.heading
+{
+    text-align: center;
+    border-bottom: 1px solid #fff4;
+    margin: 0 10rem;
+    color: white;
+    padding: 1rem;
+
+}
+.About .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+}
+.About .row .info{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+.About .row .counter{
+    flex: 1 1 48rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.About .row .info h3{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    font-weight: normal;
+    color:var(--yellow);
+}
+.About .row .info h3 span{
+    color: yellow;
+    padding:0 0.5rem;
+}
+.About .heading span{
+color: yellow;
+} 
+.About .row .counter .box{
+    width: 20rem;
+    background: #222;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+border-radius: 40px;
+}
+.About .row .counter .box span{
+font-size: 4rem;
+color: yellow;
+}
+.About .row .counter .box h3{
+font-size: 2rem;
+color: whitesmoke;
+}
+.skill h1{
+  color: yellow;
+}
+.skill h1 span{
+  color: ghostwhite;
+}
+
+
+#Education h1{
+color: yellow;
+}
+ 
+ #Education h1 span{
+color: whitesmoke;
+ }
+
+.Education .box-container{
+
+    padding:1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+padding-left: 3rem;
+align-content: center;
+flex-wrap: wrap;
+}
+
+.Education .box-container .box{
+padding-left:7rem ;
+
+position: relative;
+border-left:0.1rem solid whitesmoke;
+margin:4rem 1rem;
+width: 27rem;
+background: black;
+
+}
+.Education .box-container .box span{
+    font-size: 1.3rem;
+    background: #222;
+    color: white;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.Education .box-container .box h3{
+padding-top: 1.5rem;
+font-size: 2rem;
+
+}
+.Education .box-container .box p{
+padding:1rem 0 ;
+
+color:whitesmoke ;
+font-size: 1.4rem;
+
+
+}
+.contact h1{
+color: whitesmoke;
+}
+.contact h1 span{
+color: yellow;
+}
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.contact .row .content{
+flex: 1 1 30rem;
+padding: 4rem;
+padding-bottom: 0;
+
+    }
+.contact .row form{
+    flex: 1 1 45rem;
+    padding:2rem ;
+    margin:2rem ;
+    margin-bottom: 4rem;
+}
+.contact .row form .box{
+    padding: 1rem;
+    margin: .5rem 0;
+    background: #3333;
+    color: white;
+    text-transform: none;
+    width: 100%;
+    font-size: 1.8rem;
+
+}
+.contact .row form .message{
+height: 15rem;
+resize: none;
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: white;
+    font-size: 2.4rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    color: ghostwhite;
+    padding: 0.5rem 0;
+    font-weight: normal;
+    text-align: center;
+}
+.contact form .btnn{
+    border: none;font-size: 25px;border-radius: 20px;background-color: #fff4;color: rgb(200, 176, 83);font-family: initial;text-align: center;font-style: normal;align-self: center;align-content: center;align-items: center;width: 200px;color: whitesmoke;
+}
+.contact  form  .btnn:hover
+{
+background-color: #111;
+transition: 0.7s;
+}
+.Education .butyn{
+     border: none;font-size: 25px;border-radius: 20px;background-color: #fff4;color: rgb(200, 176, 83);font-family: initial;text-align: center;font-style: normal;align-self: center;align-content: center;align-items: center;width: 500px;color: whitesmoke;
+}
+.Education .butyn: hover{
+background-color: #111;
+transition: 0.7s;
+}
+</style>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+<body style="background:rgb(2, 2, 2);">
+
+
+
+
+
+
+
+    <script type="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+<div id="mySidenav" class="sidenav" style="text-align: center;">
+    <div class="user">
+
+    <div style="align-items: center;align-content: center;text-align: center;">
+<img style="width:12rem;height: 12rem;bottom: 10%;" src="pr.jpeg">
+</div>
+<br>
+<h1 style="color: whitesmoke;font-family: sans-serif;font-style: italic;font-size: xx-large;">Subham Dey</h1>
+<h3 style="color: whitesmoke;font-family: sans-serif;font-style: italic;">Front End Web2 dev</h3>
+
+</div>
+  <a style="background:#111;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+ <li style="list-style: none;"><a style="font-family: fantasy;font-size: x-large;color: whitesmoke;list-style: none;" href="#home">Home</a></li>
+
+    <li style="list-style: none;"><a style="font-family: fantasy;font-size: x-large;color: whitesmoke;list-style: none;" href="#About">About</a></li>
+    <li style="list-style: none;"><a style="font-family: fantasy;font-size:x-large;color: whitesmoke;list-style: none;" href="#Education">Education</a></li>
+    <li style="list-style: none;"><a style="font-family: fantasy;font-size: x-large;color: whitesmoke;list-style: none;" href="#portfolio">portfolio</a></li>
+    <li style="list-style: none;"><a style="font-family: fantasy;font-size: x-large;color: whitesmoke;list-style: ;" href="#contact">contact</a></li>
+
+</div>
+
+<div style="width:100%" id="main">
+    <span  style="font-size:30px;cursor:pointer;color: whitesmoke;text-align: center;" onclick="openNav()">&#9776; MENU</span>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img style="height:600px ;" src="https://th.bing.com/th/id/R.9d0f5009708b1c92adb022c647b89913?rik=xD6PVcERF2zjRA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f07%2fBlue-Photos-1920x1080.jpg&ehk=y0GFDmZB%2fQaWxWRBOEeFRN8P6j9DJczfbK%2bbN5A6%2ftQ%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="font-size: xx-large;">HII I'M SUBHAM DEY</h5>
+              <p p style="font-size:large;">Welcome to my Portfolio Website.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img style="height:600px;" src="https://wallpaperaccess.com/full/3239444.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="font-size:xx-large;">MY SKILLS ARE</h5>
+              <p p style="font-size:large;">PROGRAMMING IN JAVA,C++,PYTHON:DATA SCIENCE & ML,HTML,CSS,AND A BIT OF JAVASCRIPT</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img style="height:600px;" src="https://wallpapercave.com/wp/wp2952030.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="font-size:xx-large;">MY HOBBY IS TO DANCE</h5>
+              <p style="font-size:large;">AS I AM A VERY GOOD HIP HOP DANCER AND PARTICIPATED IN MANY COMPETITIONS MY STYLE IS POPPING.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<br><br><br>
+<section class="hidden">
+<div class="home" id="home">
+    <div style="color: whitesmoke;margin-left: 55px;" class="container">
+
+        <h1 style="text-align:center;font-size: 3rem;text-decoration: none;color: yellow;border-bottom: 1px solid #fff4;padding: 0.5rem;margin: 0 5rem;font-style: italic;text-orientation: sideways;">HOME</h1>
+        <br>
+<br>
+        <h2 style="text-align:center;" class="hello">Hello!,My Name Is <span class="name">Subham Dey</span></h2>
+        <h3 style="text-align:center;">I am a Student Persuing B-tech Enginnering from SOA university (ITER).</h3>
+        <p style="font-size:large;">I am from Nabrangpur district,odisha.My actual home is in Umerkote.I like to Dance,playing cricket,football,create vlogs.<br>I am currently persuing B-tech engineering in computer science and information technology in Bhubaneshawar,odisha.<br>I have a good knowledge on web devlopment, data Science,and programming in java,c++.<br>My childhood school was Saheed Laxman Nayak Public School,<br>here I have completed my 10th boards and i have scored 79 percent in 10th(icse)board.those were the golden period of my life.<br>
+            I Studied 11th and 12th in Vikash High Global Campus(BBSR).And got 94 percentage in 12th boards also i have given<br>IIT JEE Examination But Unlukily I was not selected.But then i had given SAAT examination of ITERThen here i Got selected in CSIT branch.<br>I am a Good Dancer i have performed in many competetions in my town.
+        </p>
+
+<br><p style="text-align:center;">to know more about me: click in this</p>
+
+<div  style="align-items: center;justify-content: center; font-size: 16px;
+    font-weight: 500;
+    margin-left: 45%;
+    padding:12px 35px;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 40px;background:rgba(122, 112, 112, 0.267);border: none;" class="butn">
+<button style="text-align: center;align-items: center;align-self: center;align-content: center;justify-content: center;border-radius: 20px;background-color: rgba(55, 48, 48, 0.267);display: flex;border-style:none ;"><a style="color: whitesmoke;text-decoration: none;font-family: fantasy;font-size: large;" href="#About">ABOUT ME<i style="color:whitesmoke;" class="fas fa-user"></i></a></button></div>
+
+<div style="margin-left: 85%;margin-top: -26%;" class="himg">
+<img   style="height:400px;border-radius: 2rem;" src="s1.jpeg">
+    </div>
+</div>
+</div>
+</section>
+
+
+  
+  
+
+<section style="margin-top:10%">
+
+<div style="margin-bottom: 10%;" class="About" id="About">
+<h1 style="text-orientation: sideways;font-style:italic;" class="heading"><span>About</span> Me</h1>
+<div style="padding:20px 20px 20px 20px ;" class="row">
+    <div style="color:whitesmoke;align-items: center;text-align: center;margin-bottom: 40%;" class="info">
+        
+                <h3>NAME:<span>Subham Dey</span></h3>
+
+        <h3>AGE:<span>22 years</span></h3>
+
+        <h3>QUALIFICATION:<span>undergraduate B-Tech(enginnering)</span></h3>
+        <h3>POST:<span>Student(5th sem)</span></h3>
+        <h3>LANGUAGE:<span>English,Hindi,Bengali,Odia</span></h3>
+        <h3>UNIVERSITY/COLLEGE:<span>Shiksha O anushandhan University(ITER)</span></h3>
+        <br>
+        <br>
+     
+       <button style="border: none;border-radius: 20px;background-color: #fff4;color:lightgoldenrodyellow;font-family: fantasy;font-size: 30px;text-align: center;width: 35%;font-style: normal;" ><i class="">Download  cv</i></button>
+       <br>
+       <br>
+       <br>
+       <button id="#skill" style="border: none;border-radius: 20px;background-color: #fff4;color: rgb(200, 176, 83);font-family: fantasy;font-size: 30px;text-align: center;width: 35%;font-style: normal;" ><a style="text-decoration: none;color: lightgoldenrodyellow;" href="#skill"><i> MY SKILLS</i></a></button>
+    
+    
+      <section style="text-align: center;align-content:center;align-items: center;">
+       <a href="https://github.com/subhamdey1234"><img style="width:500px ;height:500px;margin-right: 20px;margin-top: 15%;"  src="https://www.drupal.org/files/styles/grid-3-2x/public/project-images/github_commits_logo_0.png?itok=fespBwWX"></a>
+      </section>
+<h2 style="text-align:center;font-size: 3rem;text-decoration: none;color: yellow;border-bottom: 1px solid #fff4;padding: 0.5rem;margin: 0 5rem;font-style: italic;text-orientation: sideways;"></h2>
+
+      
+   
+      
+    <div style="color: whitesmoke;"  class="counter">
+        <div class="box">
+            <span>1+</span>
+            <h3>Years of experience in Web Dev.</h3>
+
+        </div>
+        <div class="box">
+            <span>10+</span>
+            <h3>projects completed.</h3>
+
+
+        </div>
+
+
+<div class="box">
+            <span>20+</span>
+            <h3>repositories in My Github profile.</h3>
+
+        </div>
+
+
+
+
+
+      
+    </div>
+</div>
+</div>
+<section class="skill" id="skill">
+<h1 style= "text-orientation: sideways;font-style:italic;border-bottom:1px solid #fff4;margin:0 10rem;padding:1rem;text-align: center;font-size: 43px;">My<span> Skills</span></h1>
+
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <img style="height: 370px;" src="https://wallpapercave.com/wp/wp7250161.png" class="card-img-top" alt="...">
+      <div style="background: black;" class="card-body">
+        <h5 style="color: white;font-family: initial;" class="card-title">JAVA PROGRAMMING LANGUAGE:</h5>
+        <p style="color: white;" class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+         <button id="" style="border: none;border-radius: 20px;background-color: #fff4;color: rgb(200, 176, 83);font-family: initial;font-size: 25px;text-align: center;font-style: normal;" ><a style="text-decoration: none;color: lightgoldenrodyellow;" href=""><i>My Java files</i></a></button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img style="height: 370px;" src="https://cdn-images-1.medium.com/max/2000/1*l4xICbIIYlz1OTymWCoUTw.jpeg" class="card-img-top" alt="...">
+      <div style="background: black;" class="card-body">
+        <h5 style="color: white;font-family: initial;" class="card-title"> HTML,CSS,JS (WEB DEVLOPMENT):</h5>
+        <p style="color: white;font-family: initial;" class="card-text">I have learnt HTML,CSS,JS language And i can make beautiful websites using these web languages. </p>
+         <button id="" style="border: none;font-size: 25px;border-radius: 20px;background-color: #fff4;color: rgb(200, 176, 83);font-family: initial;text-align: center;font-style: normal;" ><a style="text-decoration: none;color: lightgoldenrodyellow;" href=""><i>My HTML CSS JS files</i></a></button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img style="height: 370px;"  src="https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/13639/0816-C__Mistakes-Waldek_Social-dfe55464df1f3105c8add45280123176.png" class="card-img-top" alt="...">
+      <div style="background: black;" class="card-body">
+        <h5 style="color: white;font-family: initial;" class="card-title">C++ PROGRAMMING LANGUAGE:</h5>
+        <p style="color: white;font-family: initial;" class="card-text">I have knowledege about DSA(Data Structure and Algorithm) and its use in C++ I know this language when I was in 11th & 12th</p>
+     
+      <button id="" style="border: none;border-radius: 20px;background-color: #fff4;color: rgb(200, 176, 83);font-family: initial;font-size: 25px;text-align: center;font-style: bold;" ><a style="text-decoration: none;color: lightgoldenrodyellow;" href=""><i>My C++ files</i></a></button>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img style="height: 340px;" src="https://th.bing.com/th/id/OIP.VDQ5gPmAOlcGExmTCCGwigHaGV?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+      <div style="background: black;" class="card-body">
+        <h5 style="color: white;font-family: initial;" class="card-title">PYTHON PROGRAMMING LANGUAGE:</h5>
+        <p style="color: white;font-family: initial;" class="card-text">I Am able to do Data Analysis(Visusalisation of raw data) using python And I can make Machine learning models for e.g linear regression,k-means clustering,and many more.</p>
+      
+       <button id="" style="border: none;border-radius: 20px;background-color: #fff4;color: rgb(200, 176, 83);font-family: initial;font-size: 25px;text-align: center;font-style: normal;" ><a style="text-decoration: none;color: lightgoldenrodyellow;" href=""><i>My Python files</i></a></button>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+<section class="Education" id="Education">
+    <h1 style="text-orientation: sideways;font-style:italic;" class="heading"><span>My</span> Education</h1>
+<div class="box-container" style="color: white;"> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+
+
+<div class="col">
+
+     <div class="box">
+            <span >2018</span>
+            <h3 style="font-style: italic;">10 th Boards(ICSE)</h3>
+            <p style="font-style: italic;">
+                I Passed 10th boards(ICSE) in 2018 From<a style="text-decoration:none;color: yellow;" href="https://www.facebook.com/slnpsukt/"> Saheed Laxman Nayak Public School</a> located in umerkote. 
+                located in nabrangpur district. It was my first school.
+                I scored<a style="color:yellow;"> 78% in 10th Board examination 2018.</a>
+            </p>
+</div></div>
+<div class="col">
+ <div class="box">
+        <i style="color:whitesmoke;background: whitesmoke;" class="bi bi-book"></i>
+            <span>2019</span>
+            <h3 style="font-style: italic;">11 th (CBSE)</h3>
+            <p style="font-style: italic;">After 10th I Have joined<a style="text-decoration:none;color: yellow;" href="https://odishavikash.com/VRS_Bhubaneswar/"> Vikash Residential School</a>  Bhubaneshwar(High global campus), Here i Studied 11th and 12th and prepared for JEE mains Entrance Examination.
+             <a style="color:yellow;">   I have Scored 91.4% in 11th std.</a>
+
+
+            </p>
+
+</div></div>
+
+<div class="col">
+ <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+            <span>2020</span>
+            <h3 style="font-style: italic;">12 th Boards(CBSE)</h3>
+            <p style="font-style: italic;">
+            
+                
+                I Passed 12th boards(CBSE) in 2020 From<a style="text-decoration:none;color: yellow;" href="https://odishavikash.com/VRS_Bhubaneswar/"> Vikash Residential School</a>  Bhubaneshwar.
+                also i have given JEE MAINS examination2020.Unfortunately, i have not selected in IIT or NIT.
+                I scored<a style="color:yellow;"> 94% in 12th Board examination 2020.</a> 
+            </p>
+</div></div>
+
+
+</div>
+ <div class="box">
+        <i class="fas fa-graduation-cap"></i>
+            <span>2021</span>
+            <h3 style="font-style: italic;">Engineering(B-tech)(CSIT)</h3>
+            <p style="font-style: italic;">
+                Now after completion of 12th i have joined <a style="text-decoration:none;color:yellow;" href="https://www.soa.ac.in/iter">SOA UNIVERSITY(ITER)</a> college.It was my 1st year of B-tech enginnering in <a style="color:yellow;" >Computer Science and Information Technology(branch).I learned (DSA)in Java programming during my first year</a> i have got around <a style="color:yellow;">8.1</a> cgpa in first year of my college.
+            </p>
+
+
+     </div>
+
+     <div class="box">
+        <i class="fas fa-graduation-cap">
+            <span>2022</span>
+            <h3 style="">2nd year Engineering(B-tech)(CSIT)</h3>
+            <p>
+                After completion of my first year I have <a style="color:yellow;"> Learned Programming in HTML,CSS,Javascript & I did Internship in SmartKnower In Data science with python program</a>. also I got around 8.5 cgpa in 2nd year of my college.
+            </p>
+
+
+     </div>
+
+     <div class="box">
+        <i class="fas fa-graduation-cap">
+            <span>2023</span>
+            <h3>10 th Boards(ICSE)</h3>
+            <p>
+                Concluding sentence 1. Topic Sentence A topic sentence is a precise statement that reflects the main idea of the paragraph. It should be carefully written as it will show
+            </p>
+
+
+     </div>
+
+
+
+
+
+
+
+</div>
+<div class="row">
+        <div class="col">
+            <h1 style="text-align:center;">SLN public School</h1>
+            <a href="https://www.facebook.com/slnpsukt/">
+         <img style="border-left: 0.1rem solid whitesmoke;padding-left:5rem ;position: relative;margin: 4rem 4rem;width: 600px;border-radius: 15px;" src="https://th.bing.com/th/id/OIP.7_ZXpsGupjVObkdaFbB2VgHaE8?pid=ImgDet&rs=1">
+        </a>
+     </div>
+     
+
+<div class="col">
+                <h1 style="text-align:center;">Vikash Residential School</h1>
+<a href="https://odishavikash.com/VRS_Bhubaneswar/">
+         <img style="border-left: 0.1rem solid whitesmoke;padding-left:5rem ;position: relative;margin: 4rem 4rem;width: 600px;height: 360px;border-radius:15px;" src="https://th.bing.com/th/id/OIP.XHWX79-kUXrKZwazm40wCgHaHa?pid=ImgDet&rs=1">
+         </a>
+     </div>
+
+     <h1 style="text-align:center;color: cyan;">SOA ITER(My college)</h1>
+     <img style="margin-top:10px;" src="https://static.toiimg.com/thumb/msid-74298599,width-1070,height-580,imgsize-13128665,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg">
+     
+ </div>
+ <br>
+ <div style="text-align: center;align-content: center;align-self: center;align-items: center;">
+ <button class="butyn"  ><a style="text-decoration: none;color: lightgoldenrodyellow;" href="https://www.soa.ac.in/iter"><i>ITER Website</i></a></button>
+</div>
+
+<br>
+
+
+<table class="table table-hover table-dark">
+  <thead>
+    <tr style="color:yellow;font-size: larger;">
+      <th scope="col">#</th>
+      <th scope="col">Institution</th>
+      <th scope="col">Place</th>
+      <th scope="col">class</th>
+      <th scope="col">results</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="font-size: large;">
+      <th scope="row">1</th>
+      <td>Saheed Laxman nayak Public School(ICSE).</td>
+      <td>Umerkote(Dist:Nabrangpur)</td>
+      <td>10th</td>
+      <td>78% in 10th boards</td>
+
+    </tr>
+    <tr style="font-size: large;">
+      <th scope="row">2</th>
+      <td>Vikash Residential School(CBSE).</td>
+      <td>Bhubaneshwar</td>
+      <td>11th & 12th</td>
+      <td>94% in 12th boards</td>
+    </tr>
+    <tr style="font-size: large;">
+      <th scope="row">3</th>
+      <td >Shiksha O Anushandhan(ITER).</td>
+      <td>Bhubaneshwar</td>
+      <td>(B-TECH)Engineering 1st YEAR</td>
+      <td>8.1 cgpa</td>
+
+    </tr>
+    <tr style="font-size: large;">
+      <th scope="row">4</th>
+      <td >Shiksha O Anushandhan(ITER).</td>
+      <td>Bhubaneshwar</td>
+      <td>(B-TECH)Engineering 2nd YEAR</td>
+      <td>8.5 cgpa</td>
+
+    </tr>
+    
+  </tbody>
+</table>
+
+ 
+      </div>
+
+</div>
+
+
+
+</section>
+
+<section class="contact" id="contact">
+    <h1 style="text-orientation: sideways;font-style:italic;" class="heading"><span>Contact</span> Me</h1>
+
+<div class="row">
+    <div style="margin-bottom:10%;margin-left: 10%;" class="content">
+        <h3 style="color:whitesmoke;" class="title">Contact info:</h3>
+        <div style="color:whitesmoke;" class="info">
+            <h3><i class="fas fa-envelope"></i><span><img style="height:40px;width: 40px;border-radius: 8px;background: whitesmoke;" src="https://th.bing.com/th/id/OIP.jeEYJQomUE3AzFgf5ERjZQHaHg?pid=ImgDet&rs=1"></span><span>(sdey06384@gmail.com</span></h3>
+            <h3><i class="fas fa-phone"></i><img style="height:40px;width: 40px;border-radius: 8px;background: black;"  src="https://www.vhv.rs/dpng/d/487-4870959_call-the-la-studio-small-phone-icon-png.png">+91 9777837744</h3>
+            <h3><i class="fas fa-phone"></i><img style="height:40px;width: 40px;border-radius: 8px;background: yellow;"  src="https://www.vhv.rs/dpng/d/487-4870959_call-the-la-studio-small-phone-icon-png.png">+91 7834592274</h3>
+            <h3><i class="fas fa-map-marker-alt"></i><img  style="height:40px;width: 40px;border-radius: 8px;background:black;" src="https://th.bing.com/th/id/R.c146cbe617cf0ab6bb4a862ef41513a6?rik=0wwvtqd1gXxhNA&riu=http%3a%2f%2ficon-park.com%2fimagefiles%2flocation_map_pin_yellow6.png&ehk=0rZ7eUB6nub2VtoyCflbevH%2bUm%2baFs0MYs3YXsqBim0%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1">Umerkote , India</h3>
+
+
+
+
+        </div>
+        
+    </div>
+    <form>
+        <input type="text" placeholder="name" class="box">
+        <input type="email" placeholder="email" class="box">
+        <input type="text" placeholder="project" class="box">
+        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+        <button class="btnn"  type="submit">send <i class="fas fa-paper-plane"></i><img style="height:30px;width:30px;border-radius:1px;" src="https://th.bing.com/th/id/R.a373426af0ce6d1609c8142bb3f26e62?rik=hogOPJQE7G%2bU%2bw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_513939.png&ehk=OR5RyXaGLr30%2bCcdzw%2bYVg0O3FGJim33%2bJR%2baI5AyiU%3d&risl=&pid=ImgRaw&r=0"></button>
+        
+
+    </form>
+</div>
+
+
+</section>
+
+
+ </div>
+
+
+
+
+</section>
+
+
+
+
+
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "350px";
+  document.getElementById("main").style.marginLeft = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
