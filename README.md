@@ -3,7 +3,7 @@ HEY ,Its my portfolio website <describing about my skills,education,hobbies,porf
 USING HTML,CSS,JAVASCRIPT.
 IT'S BASICALLY WEB2 DESIGN CREATED BY ME.
 
-
+JUST DOWNLOAD THE JPEG FILES AND HTML FILE AND THEN RUN.....
 
 ![Screenshot (10)](https://user-images.githubusercontent.com/74315357/188582544-5922395f-6b78-435f-a9ec-d775c3a7e7e1.png)
 ![Screenshot (5)](https://user-images.githubusercontent.com/74315357/188582648-83271106-51b0-4afd-b129-b0af11dbe6b1.png)
